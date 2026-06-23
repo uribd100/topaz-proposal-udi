@@ -108,6 +108,27 @@
   .slogan span { color:#4D8EFF; font-weight:600; font-size:13px; }
   .pfoot { position: absolute; bottom: 9mm; right: 13mm; left: 13mm; display:flex;
     justify-content: space-between; color: rgba(255,255,255,.32); font-size: 10px; font-weight: 400; }
+
+  /* roadmap (page 3) */
+  .road { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 2px; }
+  .rcard { position: relative; background: linear-gradient(150deg, rgba(77,142,255,.11), rgba(255,255,255,.02));
+    border: 1px solid rgba(77,142,255,.28); border-radius: 16px; padding: 13px 15px; }
+  .rcard .ic { font-size: 18px; }
+  .rcard .t { font-weight: 700; font-size: 14px; margin: 4px 0 3px; letter-spacing: -.2px; }
+  .rcard .d { color: rgba(255,255,255,.62); font-size: 11.5px; line-height: 1.5; font-weight: 400; }
+  .rcard .next { position:absolute; top:-10px; right:14px; background:#4D8EFF; color:#06122b;
+    font-weight:700; font-size:10px; padding:4px 11px; border-radius:30px; box-shadow:0 4px 12px rgba(77,142,255,.5); }
+  .horizon { margin-top: 14px; background: linear-gradient(135deg, rgba(255,111,76,.13), rgba(77,142,255,.12));
+    border: 1px solid rgba(77,142,255,.4); border-radius: 16px; padding: 15px 18px; }
+  .horizon .ht { font-weight: 800; font-size: 14px; color: #fff; margin-bottom: 5px; }
+  .horizon .hd { color: rgba(255,255,255,.78); font-size: 12px; line-height: 1.65; font-weight: 400; }
+  .horizon .hd b { color: #9fc4ff; font-weight: 700; }
+  .cta { margin-top: 14px; background: linear-gradient(135deg, rgba(255,111,76,.16), rgba(77,142,255,.10));
+    border: 1px solid rgba(255,111,76,.4); border-radius: 18px; padding: 17px 20px; text-align: center; }
+  .cta .big { font-weight: 800; font-size: 19px; color: #fff; }
+  .cta .sub { color: rgba(255,255,255,.72); font-size: 12.5px; margin-top: 5px; font-weight: 400; }
+  .cta .contact { margin-top: 10px; font-size: 12.5px; color: #cfe0ff; font-weight: 500; }
+  .cta .contact b { color: #fff; }
 </style>
 </head>
 <body>
@@ -139,7 +160,7 @@
     <div class="keep"><b>אתה ממשיך כרגיל:</b> אותו מספר, אותה אפליקציה בטלפון. הבוט פשוט עונה לצידך — ואתה תמיד יכול להיכנס ולכתוב בעצמך.</div>
   </div>
 
-  <div class="pfoot"><span class="wm" style="font-size:12px"><b>simplif</b><i>AI</i></span><span class="num">1 / 2</span></div>
+  <div class="pfoot"><span class="wm" style="font-size:12px"><b>simplif</b><i>AI</i></span><span class="num">1 / 3</span></div>
 </div>
 
 <!-- ============ PAGE 2 ============ -->
@@ -191,13 +212,45 @@
       ולא ענית לו (סנטים בודדים). אין מנוי לוואטסאפ ואין התחייבות. הבוט בנוי לגדול איתך — בהמשך אפשר להוסיף פיצ׳רים נוספים לפי הצורך.
     </div>
 
+  </div>
+
+  <div class="pfoot"><span class="wm" style="font-size:12px"><b>simplif</b><i>AI</i></span><span class="num">2 / 3</span></div>
+</div>
+
+<!-- ============ PAGE 3 — ROADMAP + CLOSE ============ -->
+<div class="page">
+  <div class="phead">
+    <span class="wm"><b>simplif</b><i>AI</i></span>
+    <span class="kick">מפת דרכים — השותפות</span>
+  </div>
+
+  <div class="body p2">
+    <h2>לאן ניקח את הבוט יחד <span class="sm">כל אלה הרחבות של אותו בוט — נוסיף צעד-צעד, רק מה שמשתלם לך</span></h2>
+    <div class="road">
+      <div class="rcard"><span class="next">השלב הבא</span><div class="ic">📡</div><div class="t">ראדאר קבוצות</div><div class="d">מזהה בקבוצות המתווכים בקשות וילה רלוונטיות, מצליב מול היומן, ומתריע לך עם ניסוח מוכן לשליחה — בלי לפספס דיל.</div></div>
+      <div class="rcard"><div class="ic">🔁</div><div class="t">פולו-אפ אוטומטי</div><div class="d">ליד שקיבל מחיר ולא חזר → תזכורות עדינות שנעצרות מיד כשהוא עונה. מציל לידים שדועכים.</div></div>
+      <div class="rcard"><div class="ic">📊</div><div class="t">דוח בוקר אליך</div><div class="d">כל בוקר בוואטסאפ: לידים חדשים, אחוז תפוסה, ולילות ריקים לדחיפה — שליטה במבט אחד.</div></div>
+      <div class="rcard"><div class="ic">✍️</div><div class="t">סגירה אוטומטית</div><div class="d">אישרת הזמנה → חוזה דיגיטלי + קישור לתשלום מקדמה + הודעת ברוכים-הבאים עם קוד כניסה והוראות.</div></div>
+    </div>
+
+    <div class="horizon">
+      <div class="ht">וזה רק הבוט.</div>
+      <div class="hd">ככל שנגדל יחד, אפשר להרחיב <b>מעבר לבוט</b>: CRM שמתמלא לבד מכל ליד שהבוט מטפל בו, ובהמשך מערכת AI מלאה לניהול עסק הווילות — תפוסה, תמחור, אורחים ודוחות במקום אחד. נתקדם צעד-צעד, לפי מה שמשתלם לך — כל פיתוח מתומחר בנפרד כשנגיע אליו.</div>
+    </div>
+
+    <div class="cta">
+      <div class="big">מוכן להתחיל?</div>
+      <div class="sub">נתאם שיחה קצרה, נאסוף את החומר, ותוך כשבוע הבוט עונה ללקוחות שלך.</div>
+      <div class="contact">אורי בר דרור · <b>053-745-3493</b> · uribd100@gmail.com</div>
+    </div>
+
     <div class="slogan">
       <span>מפשטים עסקים. בעזרת AI.</span>
       <span class="wm"><b>simplif</b><i>AI</i></span>
     </div>
   </div>
 
-  <div class="pfoot"><span>הצעה זו תקפה ל-30 יום מתאריך ההפקה</span><span class="num">2 / 2</span></div>
+  <div class="pfoot"><span>הצעה זו תקפה ל-30 יום מתאריך ההפקה</span><span class="num">3 / 3</span></div>
 </div>
 
 </body>
