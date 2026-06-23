@@ -80,14 +80,11 @@
   .foot .box .small { color: rgba(255,255,255,.5); font-size: 10px; margin-top: 4px; line-height: 1.4; font-weight: 400; }
   .foot .ret .v { color: #8fbcff; }
   .foot .ret .per { font-size: 12.5px; color: rgba(255,255,255,.55); font-weight: 600; }
-  .foot .deal { background: linear-gradient(150deg, rgba(255,111,76,.20), rgba(255,111,76,.05));
-    border: 1px solid rgba(255,111,76,.6); box-shadow: 0 6px 24px rgba(255,111,76,.14); }
-  .badge { position:absolute; top:-10px; right:14px; background:#FF6F4C; color:#0a1024;
-    font-weight:700; font-size:10.5px; padding:4px 12px; border-radius:30px; box-shadow:0 4px 14px rgba(255,111,76,.55); }
-  .deal .row { display:flex; align-items:baseline; gap:10px; margin-top:3px; }
-  .deal .old { font-size:17px; font-weight:600; color:rgba(255,255,255,.5);
+  .foot .box .row { display:flex; align-items:baseline; gap:10px; margin-top:3px; }
+  .foot .old { font-size:17px; font-weight:600; color:rgba(255,255,255,.5);
     text-decoration: line-through; text-decoration-color:#FF6F4C; text-decoration-thickness:2.5px; }
-  .deal .new { font-size:32px; font-weight:700; color:#FF7A57; line-height:1; text-shadow:0 3px 20px rgba(255,111,76,.45); }
+  .foot .new { font-size:32px; font-weight:700; color:#FF7A57; line-height:1; text-shadow:0 3px 20px rgba(255,111,76,.45); }
+  .foot .box .opt { color:#8fbcff; font-size:9.5px; margin-top:6px; line-height:1.4; font-weight:500; }
 
   .note { color: rgba(255,255,255,.45); font-size: 10px; margin-top: 9px; line-height: 1.55; font-weight: 400; }
 
@@ -189,14 +186,14 @@
     <div class="foot">
       <div class="box ret">
         <div class="k">תפעול ותחזוקה (שלנו)</div>
-        <div class="v"><span class="num">₪250</span> <span class="per">/ חודש</span></div>
+        <div class="v"><span class="num">₪0</span> <span class="per">/ 3 חודשים</span></div>
         <div class="small">ניטור הבוט, תיקוני באגים ותמיכה שוטפת — שתמיד יעבוד ומעודכן.</div>
+        <div class="opt">* אופציונלי — המשך תמיכה מעבר ל-3 חודשים: <span class="num">₪250</span> / חודש</div>
       </div>
-      <div class="box deal">
-        <span class="badge">מחיר השקה</span>
+      <div class="box">
         <div class="k">דמי הקמה והתאמה (חד-פעמי)</div>
         <div class="row"><span class="old num">₪5,500</span><span class="new num">₪3,900</span></div>
-        <div class="small">הנחת שותף — מתוך ציפייה להמשך פיתוח יחד</div>
+        <div class="small">הנחת שת״פ — מתוך מחשבה על המשך פיתוח עתידי יחד</div>
       </div>
     </div>
 
