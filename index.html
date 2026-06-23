@@ -110,12 +110,24 @@
   .pfoot { position: absolute; bottom: 8mm; right: 13mm; left: 13mm; display:flex;
     justify-content: space-between; color: rgba(255,255,255,.32); font-size: 9.5px; font-weight: 400; }
   .pfoot .num { direction: ltr; }
+
+  /* page 1 — enlarge to fill the page (page 2 is already full) */
+  .big .hero { height: 80mm; }
+  .big .body { padding-top: 8mm; }
+  .big h2 { font-size: 16px; margin-bottom: 10px; }
+  .big h2.mt { margin-top: 15px; }
+  .big .cards, .big .gain { gap: 10px; }
+  .big .card, .big .g { padding: 13px 15px; border-radius: 15px; }
+  .big .card .ic, .big .g .ic { font-size: 19px; }
+  .big .card .t, .big .g .t { font-size: 14px; margin: 4px 0 3px; }
+  .big .card .d, .big .g .d { font-size: 11.5px; line-height: 1.5; }
+  .big .keep { padding: 12px 16px; font-size: 13px; margin-top: 12px; border-radius: 14px; }
 </style>
 </head>
 <body>
 
 <!-- ============ PAGE 1 ============ -->
-<div class="page">
+<div class="page big">
   <div class="hero">
     <div class="bar">
       <span class="wm">simplif<i>AI</i></span>
