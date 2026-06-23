@@ -13,123 +13,103 @@
   .page:last-child { page-break-after: auto; }
   .num { font-family: 'Fredoka', sans-serif; font-feature-settings: "tnum"; }
 
-  /* ---------- brand wordmark (no image, no space) ---------- */
+  /* brand wordmark — no image, no space */
   .wm { font-family: 'Outfit', sans-serif; font-weight: 900; direction: ltr;
     unicode-bidi: bidi-override; display: inline-flex; align-items: center; color: #fff;
     letter-spacing: -1.5px; line-height: 1; }
-  .wm b { font-weight: 900; }
   .wm i { font-style: normal; color: #4D8EFF; text-shadow: 0 0 18px rgba(77,142,255,.55); }
   .hero .wm { font-size: 27px; filter: drop-shadow(0 2px 8px rgba(0,0,0,.6)); }
-  .phead .wm { font-size: 21px; }
   .slogan .wm { font-size: 17px; }
 
-  /* ---------- HERO (page 1) ---------- */
-  .hero { position: relative; height: 75mm; background-image:
+  /* HERO */
+  .hero { position: relative; height: 72mm; background-image:
       linear-gradient(to bottom, rgba(6,13,31,.30) 0%, rgba(6,13,31,.45) 50%, rgba(6,13,31,.86) 82%, #060D1F 100%),
       url('hero-villa.jpg');
     background-size: cover; background-position: center 38%; }
   .hero .bar { position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: space-between;
-    align-items: center; padding: 11mm 13mm 0; }
+    align-items: center; padding: 10mm 13mm 0; }
   .hero .tag { font-weight: 600; font-size: 11px; letter-spacing: .3px;
     color: #d6e5ff; background: rgba(77,142,255,.20); border: 1px solid rgba(77,142,255,.5);
     padding: 6px 13px; border-radius: 30px; }
-  .hero .title { position: absolute; bottom: 11mm; right: 13mm; left: 13mm; }
-  .hero h1 { font-weight: 900; font-size: 37px; margin: 0; letter-spacing: -.8px;
+  .hero .title { position: absolute; bottom: 9mm; right: 13mm; left: 13mm; }
+  .hero h1 { font-weight: 900; font-size: 35px; margin: 0; letter-spacing: -.8px;
     text-shadow: 0 3px 22px rgba(0,0,0,.85); }
-  .hero .sub { font-size: 13.5px; color: #eef3fd; margin-top: 6px; font-weight: 500;
+  .hero .sub { font-size: 13px; color: #eef3fd; margin-top: 5px; font-weight: 500;
     text-shadow: 0 2px 12px rgba(0,0,0,.9); }
 
-  /* ---------- slim header (page 2) ---------- */
-  .phead { display: flex; justify-content: space-between; align-items: center; padding: 13mm 13mm 0; }
-  .phead .kick { font-weight: 600; font-size: 11px; color: #8fbcff;
-    background: rgba(77,142,255,.12); border: 1px solid rgba(77,142,255,.35);
-    padding: 5px 12px; border-radius: 30px; }
+  /* BODY */
+  .body { position: relative; padding: 7mm 13mm 0; }
+  .body.p2 { padding-top: 11mm; }
+  .body::before { content:""; position:absolute; top:-30px; right:-40px; width:300px; height:300px;
+    background: radial-gradient(circle, rgba(77,142,255,.15), transparent 65%); pointer-events:none; }
+  h2 { font-size: 15.5px; margin: 0 0 8px; color: #4D8EFF; font-weight: 800; display:flex; align-items:center; gap:8px; }
+  h2.mt { margin-top: 13px; }
+  h2::before { content:""; width:15px; height:3px; background:#4D8EFF; border-radius:3px; box-shadow:0 0 12px rgba(77,142,255,.9); }
+  h2 .sm { color: rgba(255,255,255,.45); font-weight: 500; font-size: 11.5px; }
 
-  /* ---------- BODY ---------- */
-  .body { position: relative; padding: 8mm 13mm 0; }
-  .body.p2 { padding-top: 7mm; }
-  .body::before { content:""; position:absolute; top:-30px; right:-40px; width:320px; height:320px;
-    background: radial-gradient(circle, rgba(77,142,255,.16), transparent 65%); pointer-events:none; }
-  h2 { font-size: 16px; margin: 0 0 11px; color: #4D8EFF; font-weight: 800; display:flex; align-items:center; gap:9px; }
-  h2::before { content:""; width:16px; height:3px; background:#4D8EFF; border-radius:3px; box-shadow:0 0 12px rgba(77,142,255,.9); }
-  h2 .sm { color: rgba(255,255,255,.45); font-weight: 500; font-size: 12px; }
-
-  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .card { position: relative; background: linear-gradient(150deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
-    border: 1px solid rgba(77,142,255,.20); border-radius: 16px; padding: 12px 14px;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.06); }
-  .card .ic { font-size: 18px; }
-  .card .t { font-weight: 700; font-size: 14px; margin: 3px 0 3px; letter-spacing: -.2px; }
-  .card .d { color: rgba(255,255,255,.62); font-size: 11.5px; line-height: 1.5; font-weight: 400; }
+  .cards, .gain, .road { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .card, .g, .rcard { position: relative; border-radius: 14px; padding: 10px 13px; }
+  .card { background: linear-gradient(150deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
+    border: 1px solid rgba(77,142,255,.20); box-shadow: inset 0 1px 0 rgba(255,255,255,.06); }
+  .g { background: linear-gradient(150deg, rgba(34,197,94,.10), rgba(77,142,255,.05)); border: 1px solid rgba(34,197,94,.22); }
+  .rcard { background: linear-gradient(150deg, rgba(77,142,255,.11), rgba(255,255,255,.02)); border: 1px solid rgba(77,142,255,.28); }
+  .card .ic, .g .ic, .rcard .ic { font-size: 17px; }
+  .card .t, .g .t, .rcard .t { font-weight: 700; font-size: 13.5px; margin: 3px 0 2px; letter-spacing: -.2px; }
+  .card .d, .g .d, .rcard .d { color: rgba(255,255,255,.62); font-size: 11px; line-height: 1.45; font-weight: 400; }
+  .rcard .next { position:absolute; top:-9px; right:13px; background:#4D8EFF; color:#06122b;
+    font-weight:700; font-size:9.5px; padding:3px 10px; border-radius:30px; box-shadow:0 3px 10px rgba(77,142,255,.5); }
 
   .keep { background: linear-gradient(90deg, rgba(77,142,255,.18), rgba(77,142,255,.04));
-    border: 1px solid rgba(77,142,255,.42); border-radius: 14px; padding: 13px 16px; font-size: 13px; margin: 13px 0 0; font-weight: 500; }
+    border: 1px solid rgba(77,142,255,.42); border-radius: 13px; padding: 10px 15px; font-size: 12.5px; margin: 10px 0 0; font-weight: 500; }
   .keep b { color: #8fbcff; font-weight: 700; }
 
-  /* gain cards (the section Uri liked) */
-  .gain { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 2px; }
-  .gain .g { background: linear-gradient(150deg, rgba(34,197,94,.10), rgba(77,142,255,.05));
-    border: 1px solid rgba(34,197,94,.22); border-radius: 16px; padding: 12px 14px; }
-  .gain .g .t { font-weight: 700; font-size: 13.5px; color: #fff; margin-bottom: 3px; }
-  .gain .g .d { color: rgba(255,255,255,.62); font-size: 11.5px; line-height: 1.5; font-weight: 400; }
-  .gain .g .ic { font-size: 17px; }
-
-  table { width: 100%; border-collapse: collapse; margin-top: 2px; font-size: 13px; }
-  th, td { text-align: right; padding: 9px 12px; border-bottom: 1px solid rgba(255,255,255,.08); }
-  th { color: rgba(255,255,255,.5); font-weight: 600; font-size: 11.5px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th, td { text-align: right; padding: 6.5px 11px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  th { color: rgba(255,255,255,.5); font-weight: 600; font-size: 11px; }
   td:first-child { font-weight: 500; }
-  td.price { font-size: 15px; font-weight: 600; white-space: nowrap; }
+  td.price { font-size: 14px; font-weight: 600; white-space: nowrap; }
   .free { color: #4D8EFF; font-weight: 700; }
-  tr.total td { border-top: 2px solid #4D8EFF; border-bottom: none; font-weight: 800; padding-top: 11px; font-size: 16px; }
-  tr.total .price { color: #4D8EFF; font-size: 19px; font-weight: 700; }
+  tr.total td { border-top: 2px solid #4D8EFF; border-bottom: none; font-weight: 800; padding-top: 9px; font-size: 14.5px; }
+  tr.total .price { color: #4D8EFF; font-size: 17px; font-weight: 700; }
 
-  .foot { display: flex; gap: 12px; margin-top: 14px; align-items: stretch; }
+  .foot { display: flex; gap: 10px; margin-top: 11px; align-items: stretch; }
   .foot .box { flex: 1; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.12);
-    border-radius: 16px; padding: 13px 16px; position: relative; }
-  .foot .box .k { color: rgba(255,255,255,.55); font-size: 11.5px; font-weight: 500; }
-  .foot .box .v { font-weight: 700; font-size: 21px; margin-top: 5px; }
-  .foot .box .small { color: rgba(255,255,255,.5); font-size: 10.5px; margin-top: 5px; line-height: 1.45; font-weight: 400; }
+    border-radius: 14px; padding: 11px 15px; position: relative; }
+  .foot .box .k { color: rgba(255,255,255,.55); font-size: 11px; font-weight: 500; }
+  .foot .box .v { font-weight: 700; font-size: 20px; margin-top: 4px; }
+  .foot .box .small { color: rgba(255,255,255,.5); font-size: 10px; margin-top: 4px; line-height: 1.4; font-weight: 400; }
   .foot .ret .v { color: #8fbcff; }
-  .foot .ret .per { font-size: 13px; color: rgba(255,255,255,.55); font-weight: 600; }
+  .foot .ret .per { font-size: 12.5px; color: rgba(255,255,255,.55); font-weight: 600; }
   .foot .deal { background: linear-gradient(150deg, rgba(255,111,76,.20), rgba(255,111,76,.05));
     border: 1px solid rgba(255,111,76,.6); box-shadow: 0 6px 24px rgba(255,111,76,.14); }
-  .badge { position:absolute; top:-11px; right:15px; background:#FF6F4C; color:#0a1024;
-    font-weight:700; font-size:11px; padding:5px 13px; border-radius:30px; letter-spacing:.2px;
-    box-shadow:0 4px 14px rgba(255,111,76,.55); }
-  .deal .row { display:flex; align-items:baseline; gap:11px; margin-top:4px; }
-  .deal .old { font-size:18px; font-weight:600; color:rgba(255,255,255,.5);
+  .badge { position:absolute; top:-10px; right:14px; background:#FF6F4C; color:#0a1024;
+    font-weight:700; font-size:10.5px; padding:4px 12px; border-radius:30px; box-shadow:0 4px 14px rgba(255,111,76,.55); }
+  .deal .row { display:flex; align-items:baseline; gap:10px; margin-top:3px; }
+  .deal .old { font-size:17px; font-weight:600; color:rgba(255,255,255,.5);
     text-decoration: line-through; text-decoration-color:#FF6F4C; text-decoration-thickness:2.5px; }
-  .deal .new { font-size:34px; font-weight:700; color:#FF7A57; line-height:1;
-    text-shadow:0 3px 20px rgba(255,111,76,.45); }
+  .deal .new { font-size:32px; font-weight:700; color:#FF7A57; line-height:1; text-shadow:0 3px 20px rgba(255,111,76,.45); }
 
-  .note { color: rgba(255,255,255,.45); font-size: 10.5px; margin-top: 13px; line-height: 1.6; font-weight: 400; }
-  .slogan { display:flex; align-items:center; justify-content:space-between; margin-top: 14px; padding-top:11px;
-    border-top:1px solid rgba(255,255,255,.08); }
-  .slogan span { color:#4D8EFF; font-weight:600; font-size:13px; }
-  .pfoot { position: absolute; bottom: 9mm; right: 13mm; left: 13mm; display:flex;
-    justify-content: space-between; color: rgba(255,255,255,.32); font-size: 10px; font-weight: 400; }
-  .pfoot .num { direction: ltr; }
+  .note { color: rgba(255,255,255,.45); font-size: 10px; margin-top: 9px; line-height: 1.55; font-weight: 400; }
 
-  /* roadmap (page 3) */
-  .road { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 2px; }
-  .rcard { position: relative; background: linear-gradient(150deg, rgba(77,142,255,.11), rgba(255,255,255,.02));
-    border: 1px solid rgba(77,142,255,.28); border-radius: 16px; padding: 13px 15px; }
-  .rcard .ic { font-size: 18px; }
-  .rcard .t { font-weight: 700; font-size: 14px; margin: 4px 0 3px; letter-spacing: -.2px; }
-  .rcard .d { color: rgba(255,255,255,.62); font-size: 11.5px; line-height: 1.5; font-weight: 400; }
-  .rcard .next { position:absolute; top:-10px; right:14px; background:#4D8EFF; color:#06122b;
-    font-weight:700; font-size:10px; padding:4px 11px; border-radius:30px; box-shadow:0 4px 12px rgba(77,142,255,.5); }
-  .horizon { margin-top: 14px; background: linear-gradient(135deg, rgba(255,111,76,.13), rgba(77,142,255,.12));
-    border: 1px solid rgba(77,142,255,.4); border-radius: 16px; padding: 15px 18px; }
-  .horizon .ht { font-weight: 800; font-size: 14px; color: #fff; margin-bottom: 5px; }
-  .horizon .hd { color: rgba(255,255,255,.78); font-size: 12px; line-height: 1.65; font-weight: 400; }
+  .horizon { margin-top: 11px; background: linear-gradient(135deg, rgba(255,111,76,.13), rgba(77,142,255,.12));
+    border: 1px solid rgba(77,142,255,.4); border-radius: 14px; padding: 12px 16px; }
+  .horizon .ht { font-weight: 800; font-size: 13.5px; color: #fff; margin-bottom: 4px; }
+  .horizon .hd { color: rgba(255,255,255,.78); font-size: 11.5px; line-height: 1.6; font-weight: 400; }
   .horizon .hd b { color: #9fc4ff; font-weight: 700; }
-  .cta { margin-top: 14px; background: linear-gradient(135deg, rgba(255,111,76,.16), rgba(77,142,255,.10));
-    border: 1px solid rgba(255,111,76,.4); border-radius: 18px; padding: 17px 20px; text-align: center; }
-  .cta .big { font-weight: 800; font-size: 19px; color: #fff; }
-  .cta .sub { color: rgba(255,255,255,.72); font-size: 12.5px; margin-top: 5px; font-weight: 400; }
-  .cta .contact { margin-top: 10px; font-size: 12.5px; color: #cfe0ff; font-weight: 500; }
+
+  .cta { margin-top: 11px; background: linear-gradient(135deg, rgba(255,111,76,.16), rgba(77,142,255,.10));
+    border: 1px solid rgba(255,111,76,.4); border-radius: 16px; padding: 14px 18px; text-align: center; }
+  .cta .big { font-weight: 800; font-size: 18px; color: #fff; }
+  .cta .sub { color: rgba(255,255,255,.72); font-size: 12px; margin-top: 4px; font-weight: 400; }
+  .cta .contact { margin-top: 9px; font-size: 12px; color: #cfe0ff; font-weight: 500; }
   .cta .contact b { color: #fff; }
+
+  .slogan { display:flex; align-items:center; justify-content:space-between; margin-top: 12px; padding-top:10px;
+    border-top:1px solid rgba(255,255,255,.08); }
+  .slogan span { color:#4D8EFF; font-weight:600; font-size:12.5px; }
+  .pfoot { position: absolute; bottom: 8mm; right: 13mm; left: 13mm; display:flex;
+    justify-content: space-between; color: rgba(255,255,255,.32); font-size: 9.5px; font-weight: 400; }
+  .pfoot .num { direction: ltr; }
 </style>
 </head>
 <body>
@@ -138,7 +118,7 @@
 <div class="page">
   <div class="hero">
     <div class="bar">
-      <span class="wm"><b>simplif</b><i>AI</i></span>
+      <span class="wm">simplif<i>AI</i></span>
       <span class="tag">הצעה · בוט WhatsApp AI</span>
     </div>
     <div class="title">
@@ -159,30 +139,23 @@
     </div>
 
     <div class="keep"><b>אתה ממשיך כרגיל:</b> אותו מספר, אותה אפליקציה בטלפון. הבוט פשוט עונה לצידך — ואתה תמיד יכול להיכנס ולכתוב בעצמך.</div>
-  </div>
 
-  <div class="pfoot"><span class="wm" style="font-size:12px"><b>simplif</b><i>AI</i></span><span class="num">1 / 3</span></div>
-</div>
-
-<!-- ============ PAGE 2 ============ -->
-<div class="page">
-  <div class="phead">
-    <span class="wm"><b>simplif</b><i>AI</i></span>
-    <span class="kick">למה זה משתלם והעלויות</span>
-  </div>
-
-  <div class="body p2">
-    <h2>מה אתה מרוויח</h2>
+    <h2 class="mt">מה אתה מרוויח</h2>
     <div class="gain">
       <div class="g"><div class="ic">⏱️</div><div class="t">לא מפספס לידים</div><div class="d">כל פנייה מקבלת מענה מיידי — בלילה, בשבת, וגם כשאתה לא פנוי לטלפון.</div></div>
       <div class="g"><div class="ic">🧘</div><div class="t">פחות עומס ידני</div><div class="d">הבוט עושה את הסינון והמידע הבסיסי. אתה נכנס רק כשהליד חם ומוכן.</div></div>
       <div class="g"><div class="ic">🎯</div><div class="t">פחות החמצות</div><div class="d">גם שיחות שלא נענו מקבלות מענה. לידים חמים קופצים אליך עם התראה.</div></div>
       <div class="g"><div class="ic">🕹️</div><div class="t">שליטה מלאה</div><div class="d">אתה מאשר, אתה סוגר, אתה מעדכן מחירים. הבוט עובד בשבילך — לא במקומך.</div></div>
     </div>
+  </div>
 
-    <div class="keep" style="margin-top:13px"><b>הבוט לא סוגר ולא גובה כסף.</b> הוא אוסף את הפרטים, בודק זמינות ומתריע לך — הסגירה תמיד אצלך, אישית.</div>
+  <div class="pfoot"><span>נופש טופז אילת</span><span class="num">1 / 2</span></div>
+</div>
 
-    <h2 style="margin-top:18px">העלויות</h2>
+<!-- ============ PAGE 2 ============ -->
+<div class="page">
+  <div class="body p2">
+    <h2>העלויות</h2>
     <table>
       <tr><th>מה</th><th>עלות לחודש</th></tr>
       <tr><td>מענה ללקוחות בוואטסאפ (רוב מוחלט של הפעילות)</td><td class="price free">חינם</td></tr>
@@ -208,35 +181,21 @@
     </div>
 
     <div class="note">
-      תשלומי הצד-ג' משוערים ומבוססים על תעריפי וואטסאפ/ענן הנוכחיים, ומשולמים ישירות ל-Meta ולספק הענן.
-      הרוב המוחלט של הפעילות — מענה ללקוחות שפונים אליך — חינם לחלוטין; משלמים רק על הודעה יזומה למי שהתקשר
-      ולא ענית לו (סנטים בודדים). אין מנוי לוואטסאפ ואין התחייבות. הבוט בנוי לגדול איתך — בהמשך אפשר להוסיף פיצ׳רים נוספים לפי הצורך.
+      תשלומי הצד-ג' משוערים, מבוססים על תעריפי וואטסאפ/ענן הנוכחיים ומשולמים ישירות ל-Meta ולספק הענן.
+      רוב הפעילות — מענה ללקוחות שפונים אליך — חינם; משלמים רק על הודעה יזומה למי שהתקשר ולא ענית לו. אין מנוי לוואטסאפ ואין התחייבות.
     </div>
 
-  </div>
-
-  <div class="pfoot"><span class="wm" style="font-size:12px"><b>simplif</b><i>AI</i></span><span class="num">2 / 3</span></div>
-</div>
-
-<!-- ============ PAGE 3 — ROADMAP + CLOSE ============ -->
-<div class="page">
-  <div class="phead">
-    <span class="wm"><b>simplif</b><i>AI</i></span>
-    <span class="kick">מפת דרכים עתידית · אופציונלי</span>
-  </div>
-
-  <div class="body p2">
-    <h2>לאן אפשר לקחת את הבוט הלאה <span class="sm">כל אלו הרחבות של אותו בוט — צעד-צעד, רק מה שמתאים לך</span></h2>
+    <h2 class="mt">לאן אפשר לקחת את הבוט הלאה <span class="sm">אופציונלי · הרחבות של אותו בוט, צעד-צעד</span></h2>
     <div class="road">
-      <div class="rcard"><span class="next">השלב הבא</span><div class="ic">📡</div><div class="t">ראדאר קבוצות</div><div class="d">מזהה בקבוצות המתווכים בקשות וילה רלוונטיות, מצליב מול היומן, ומתריע לך עם ניסוח מוכן לשליחה — בלי לפספס דיל.</div></div>
-      <div class="rcard"><div class="ic">🔁</div><div class="t">פולו-אפ אוטומטי</div><div class="d">ליד שקיבל מחיר ולא חזר → תזכורות עדינות שנעצרות מיד כשהוא עונה. מציל לידים שדועכים.</div></div>
-      <div class="rcard"><div class="ic">📊</div><div class="t">דוח בוקר אליך</div><div class="d">כל בוקר בוואטסאפ: לידים חדשים, אחוז תפוסה, ולילות ריקים לדחיפה — שליטה במבט אחד.</div></div>
-      <div class="rcard"><div class="ic">✍️</div><div class="t">סגירה אוטומטית</div><div class="d">אישרת הזמנה → חוזה דיגיטלי + קישור לתשלום מקדמה + הודעת ברוכים-הבאים עם קוד כניסה והוראות.</div></div>
+      <div class="rcard"><span class="next">השלב הבא</span><div class="ic">📡</div><div class="t">ראדאר קבוצות</div><div class="d">מזהה בקבוצות המתווכים בקשות וילה רלוונטיות, מצליב מול היומן, ומתריע לך עם ניסוח מוכן — בלי לפספס דיל.</div></div>
+      <div class="rcard"><div class="ic">🔁</div><div class="t">פולו-אפ אוטומטי</div><div class="d">ליד שקיבל מחיר ולא חזר → תזכורות עדינות שנעצרות כשהוא עונה. מציל לידים שדועכים.</div></div>
+      <div class="rcard"><div class="ic">📊</div><div class="t">דוח בוקר אליך</div><div class="d">כל בוקר: לידים חדשים, אחוז תפוסה, ולילות ריקים לדחיפה — שליטה במבט אחד.</div></div>
+      <div class="rcard"><div class="ic">✍️</div><div class="t">סגירה אוטומטית</div><div class="d">אישרת הזמנה → חוזה דיגיטלי + קישור לתשלום מקדמה + הודעת ברוכים-הבאים עם קוד כניסה.</div></div>
     </div>
 
     <div class="horizon">
       <div class="ht">וזה רק הבוט.</div>
-      <div class="hd">במידה ונרצה, אפשר להרחיב ולגדול <b>מעבר לבוט</b>: CRM שמתמלא לבד באופן אוטומטי מכל ליד שהבוט מטפל בו או שמגיע במייל, ובהמשך מערכת AI מלאה לניהול עסק הווילות — תפוסה, תמחור וסליקה, ניהול אורחים, הודעות אוטומטיות ודוחות, הכל במקום אחד. <b>נוכל למכור אותה יחד</b> לבעלי דירות Airbnb באילת ובארץ. נתקדם צעד-צעד, בזמן שלך — כל פיתוח יתומחר בנפרד כשנגיע אליו.</div>
+      <div class="hd">במידה ונרצה, אפשר להרחיב ולגדול <b>מעבר לבוט</b>: CRM שמתמלא לבד מכל ליד שהבוט מטפל בו או שמגיע במייל, ובהמשך מערכת AI מלאה לניהול עסק הווילות — תפוסה, תמחור וסליקה, ניהול אורחים, הודעות אוטומטיות ודוחות, הכל במקום אחד. <b>נוכל למכור אותה יחד</b> לבעלי דירות Airbnb באילת ובארץ. נתקדם בזמן שלך — כל פיתוח יתומחר בנפרד כשנגיע אליו.</div>
     </div>
 
     <div class="cta">
@@ -247,11 +206,11 @@
 
     <div class="slogan">
       <span>מפשטים עסקים. בעזרת AI.</span>
-      <span class="wm"><b>simplif</b><i>AI</i></span>
+      <span class="wm">simplif<i>AI</i></span>
     </div>
   </div>
 
-  <div class="pfoot"><span>הצעה זו תקפה ל-30 יום מתאריך ההפקה</span><span class="num">3 / 3</span></div>
+  <div class="pfoot"><span>הצעה זו תקפה ל-30 יום מתאריך ההפקה</span><span class="num">2 / 2</span></div>
 </div>
 
 </body>
