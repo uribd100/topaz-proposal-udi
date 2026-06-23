@@ -14,12 +14,9 @@
   .num { font-family: 'Fredoka', sans-serif; font-feature-settings: "tnum"; }
 
   /* brand wordmark — no image, no space */
-  .wm { font-family: 'Outfit', sans-serif; font-weight: 900; direction: ltr;
-    unicode-bidi: bidi-override; display: inline-flex; align-items: center; color: #fff;
-    letter-spacing: -1.5px; line-height: 1; }
-  .wm i { font-style: normal; color: #4D8EFF; text-shadow: 0 0 18px rgba(77,142,255,.55); }
-  .hero .wm { font-size: 27px; filter: drop-shadow(0 2px 8px rgba(0,0,0,.6)); }
-  .slogan .wm { font-size: 17px; }
+  .logo-img { display: block; width: auto; }
+  .hero .logo-img { height: 30px; filter: drop-shadow(0 2px 8px rgba(0,0,0,.6)); }
+  .slogan .logo-img { height: 20px; }
 
   /* HERO */
   .hero { position: relative; height: 72mm; background-image:
@@ -135,7 +132,7 @@
 <div class="page big">
   <div class="hero">
     <div class="bar">
-      <span class="wm">simplif<i>AI</i></span>
+      <img class="logo-img" src="logo-wordmark.png" alt="simplifAI">
       <span class="tag">הצעה · בוט WhatsApp AI</span>
     </div>
     <div class="title">
@@ -223,7 +220,7 @@
 
     <div class="slogan">
       <span>מפשטים עסקים. בעזרת AI.</span>
-      <span class="wm">simplif<i>AI</i></span>
+      <img class="logo-img" src="logo-wordmark.png" alt="simplifAI">
     </div>
   </div>
 
